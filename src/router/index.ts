@@ -8,6 +8,10 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/emergency',
     component: () => import('../view/emergency-command/index.vue')
+  },
+  {
+    path: '/monitoring',
+    component: () => import('../view/monitoring/index.vue')
   }
 ]
 

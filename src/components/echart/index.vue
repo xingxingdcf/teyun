@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div id="chart" style="width: 600px; height: 400px"></div>
+  <div class="base-echart">
+    <div class="echart" ref="echartDivRef"></div>
   </div>
 </template>
 

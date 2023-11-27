@@ -1,8 +1,10 @@
 <template>
   <div class="dataScreen-container">
-    <div class="menu"></div>
+    <!-- <div class="menu"></div> -->
     <div class="dataScreen-content" ref="dataScreenRef">
-      <RouterView />
+      <div class="dataScreen-main">
+        <RouterView />
+      </div>
     </div>
   </div>
 </template>
@@ -29,7 +31,7 @@ const resize = () => {
 }
 
 // 根据浏览器大小推断缩放比例
-const getScale = (width = 1920, height = 1080) => {
+const getScale = (width = 3840, height = 1080) => {
   let ww = window.innerWidth / width
   let wh = window.innerHeight / height
   return ww < wh ? ww : wh
@@ -53,6 +55,7 @@ body,
   height: 100%;
   padding: 0;
   margin: 0;
+  user-select: none;
 }
 
 .dataScreen-container {
@@ -75,6 +78,14 @@ body,
     transition: all 0.3s;
     transform-origin: left top;
   }
+}
+
+.dataScreen-main {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 12px 42px 20px;
 }
 
 .menu {

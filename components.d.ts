@@ -7,11 +7,22 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AlarmLevel: typeof import('./src/components/alarm-level/index.vue')['default']
     BaseChart: typeof import('./src/components/base-chart/index.vue')['default']
+    BaseEchart: typeof import('./src/components/echart/src/base-echart.vue')['default']
+    Echart: typeof import('./src/components/echart/index.vue')['default']
     ElCarousel: typeof import('element-plus/es')['ElCarousel']
     ElCarouselItem: typeof import('element-plus/es')['ElCarouselItem']
     ElConfigProvider: typeof import('element-plus/es')['ElConfigProvider']
+    ElDatePicker: typeof import('element-plus/es')['ElDatePicker']
+    ElInput: typeof import('element-plus/es')['ElInput']
+    ElOption: typeof import('element-plus/es')['ElOption']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
+    ElSelect: typeof import('element-plus/es')['ElSelect']
+    ElTabPane: typeof import('element-plus/es')['ElTabPane']
+    ElTabs: typeof import('element-plus/es')['ElTabs']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
+    LineEchart: typeof import('./src/components/echart/src/line-echart.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
