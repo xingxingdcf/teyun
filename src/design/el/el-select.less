@@ -1,0 +1,38 @@
+.el-select {
+  width: 90px;
+  height: 36px;
+  background: #022056;
+  // 修改下拉框样式-点击框focus
+  .el-select__caret {
+    color: #00d6ff !important; // 清除按钮
+  }
+
+  // 下拉框-展开样式
+  .el-select-dropdown__item.selected {
+    background-color: #005dff !important; // 选中
+  }
+
+  .el-select-dropdown__item {
+    color: #00d6ff !important; // 下拉项颜色
+    &:hover {
+      background-color: #005dff !important; // hover
+    }
+  }
+
+  :deep(.el-input__wrapper) {
+    height: 35px;
+    background-color: rgba(0, 0, 0, 0) !important;
+    box-shadow: 0 0 0 1px #00d6ff inset !important;
+  }
+
+  :deep(.el-input__inner) {
+    color: #00d6ff !important; // 选中字体色
+  }
+
+  :deep(.el-popper) {
+    background-color: #001861 !important; // 展开下拉背景
+    .el-popper__arrow::before {
+      background-color: #022056 !important; //箭头按钮背景色
+    }
+  }
+}

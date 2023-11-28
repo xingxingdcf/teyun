@@ -1,0 +1,52 @@
+.el-date-editor {
+  display: flex;
+  align-items: center;
+  margin-left: 22px;
+}
+:deep(.el-input__inner) {
+  background-color: #022056;
+  width: 50px;
+  height: 36px;
+  color: #b5eaff;
+  font-size: 14px;
+  border-color: #022056 !important;
+}
+:deep(.el-input__wrapper) {
+  background-color: #022056;
+  width: 50px !important;
+  height: 36px !important;
+  color: #b5eaff;
+  font-size: 14px;
+  border-color: #022056 !important;
+}
+:deep(.el-date-editor.el-input, .el-date-editor.el-input__wrapper) {
+  width: 97px !important;
+  height: 36px !important;
+}
+
+:deep(.el-input__icon) {
+  line-height: 36px;
+}
+
+:deep(.popperClass.el-date-picker) {
+  // 下拉
+
+  width: 220px;
+  height: 200px;
+  background-color: #022056;
+  &__header-label {
+    font-size: 14px;
+  }
+  .el-picker-panel__content {
+    width: 220px;
+    height: 200px;
+    margin-left: 0;
+  }
+  .el-year-tabel td {
+    padding: 5px 0;
+    .cell {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}
