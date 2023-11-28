@@ -38,7 +38,7 @@ function changeItem(index: number) {
 <style scoped lang="less">
 .list {
   padding: 0 16px;
-  margin-top: 15px;
+
   .item {
     display: flex;
     align-items: center;

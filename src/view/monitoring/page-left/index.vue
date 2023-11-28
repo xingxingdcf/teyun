@@ -18,8 +18,9 @@ import Monitor from './monitor/index.vue'
 .page-left {
   width: 1100px;
   height: 100%;
-  margin-right: 40px;
-
+  padding-right: 10px;
+  margin-left: 20px;
+  background: url('@/assets/monitoring/left-bg.png');
   .top {
     width: 100%;
 

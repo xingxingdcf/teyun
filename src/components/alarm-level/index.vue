@@ -9,13 +9,13 @@
 
 <script setup lang="ts">
 export interface Props {
-  value: number | string
+  value: number
 }
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   value: 0
 })
 
-function formatText(value: string | number) {
+function formatText(value: number) {
   let initText = {
     text: '',
     color: '#ffffff'

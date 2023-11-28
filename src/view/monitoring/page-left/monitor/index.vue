@@ -3,7 +3,7 @@
     <div class="top">
       <div class="s-title">避碰预警统计</div>
       <div class="select">
-        <el-select v-model="value" class="el-select" placeholder="Select">
+        <el-select :teleported="false" v-model="value" class="el-select">
           <el-option
             v-for="item in options"
             :key="item.value"
@@ -31,7 +31,7 @@ import MRankings from './m-rankings.vue'
 
 import { ref } from 'vue'
 
-const value = ref('')
+const value = ref('Option1')
 
 const options = [
   {
@@ -58,6 +58,7 @@ const options = [
 </script>
 
 <style scoped lang="less">
+@import '@/design/el/el-select.less';
 .top {
   display: flex;
   justify-content: space-between;

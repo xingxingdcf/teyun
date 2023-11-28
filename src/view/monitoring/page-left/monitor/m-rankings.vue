@@ -1,5 +1,10 @@
 <template>
   <div class="list">
+    <div class="titles">
+      <div class="title">报警统计排名</div>
+      <div class="title">报警</div>
+      <div class="title">记录</div>
+    </div>
     <div
       class="item"
       :class="{ 'active-item': activeItem === index }"
@@ -9,7 +14,8 @@
     >
       <div class="index">{{ index + 1 }}</div>
       <div class="name">大富</div>
-      <div class="jing"></div>
+      <div class="jing">1</div>
+      <div class="jilv">1</div>
     </div>
   </div>
 </template>
@@ -46,9 +52,24 @@ function changeItem(index: number) {
     .name {
       width: 106px;
     }
+    .jilv {
+      margin-left: 50px;
+    }
   }
 }
 .active-item {
   background: url('@/assets/monitoring/rankings-bg.png') !important;
+}
+
+.titles {
+  display: flex;
+  justify-content: space-around;
+  background-color: #0257cc;
+  padding: 12px 10px;
+  font-size: 14px;
+}
+.title {
+  font-size: 14px;
+  color: #1ffff9;
 }
 </style>

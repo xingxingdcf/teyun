@@ -19,19 +19,17 @@
 :deep(.el-input__icon) {
   line-height: 36px;
 }
-
+.el-date-table td.in-range .el-date-table-cell {
+  background-color: #022056;
+}
 :deep(.el-date-range-picker) {
   // 下拉
 
-  width: 220px;
-  height: 200px;
   background-color: #022056;
   &__header-label {
     font-size: 14px;
   }
   .el-picker-panel__content {
-    width: 220px;
-    height: 200px;
     margin-left: 0;
   }
   .el-year-tabel td {
@@ -40,5 +38,23 @@
       width: 32px;
       height: 32px;
     }
+  }
+  .el-picker-panel__footer {
+    background-color: #022056;
+  }
+  .el-date-picker__footer button.is-plain.is-primary {
+    background-color: #ff0000; /* 你想要的颜色 */
+    border-color: #ff0000; /* 你想要的颜色 */
+    color: #ffffff; /* 你想要的颜色 */
+  }
+
+  /* 修改确定按钮悬停状态下的样式 */
+  .el-date-picker__footer button.is-plain.is-primary:hover {
+    background-color: #00ff00; /* 你想要的颜色 */
+    border-color: #00ff00; /* 你想要的颜色 */
+    color: #ffffff; /* 你想要的颜色 */
+  }
+  .el-button.is-plain:hover {
+    background: rgba(80, 136, 151, 0.1) !important;
   }
 }

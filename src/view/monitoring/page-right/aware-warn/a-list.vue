@@ -101,16 +101,7 @@ const handleClick = (tab: TabsPaneContext, event: Event) => {
 </script>
 
 <style scoped lang="less">
-.el-tabs {
-  width: 100%;
-  > .el-tabs__item {
-    font-size: 16px;
-    background-color: #00f1f4;
-  }
-  > .is-active {
-    background-color: #00f1f4;
-  }
-}
+@import '@/design/el/el-tabs.less';
 .table-title {
   display: flex;
   font-size: 14px;

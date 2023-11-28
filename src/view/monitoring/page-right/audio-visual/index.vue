@@ -12,12 +12,11 @@
       </div>
     </div>
 
-    .
-    <div class="video">
-      <div class="video-window"></div>
+    <div class="dashboard">
+      <VideoVoiceDashboard width="482px" height="300px"></VideoVoiceDashboard>
 
       <div class="list">
-        <v-list></v-list>
+        <VideoVoiceList :maxHeight="'300px'"></VideoVoiceList>
       </div>
     </div>
   </div>
@@ -26,7 +25,8 @@ CCTV
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import VList from './v-list.vue'
+import VideoVoiceList from '@/components/video-voice-list/index.vue'
+import VideoVoiceDashboard from '@/components/video-voice-dashboard/index.vue'
 const activeBtn = ref(0)
 
 const btns = [
@@ -43,8 +43,8 @@ function changeItem(index: number) {
 <style scoped lang="less">
 .audio-visual {
   width: 100%;
-  height: 100%;
-  padding: 16px;
+  height: 500px;
+  padding: 0 16px;
   background: url('@/assets/monitoring/video-bg.png');
   .btns {
     display: flex;
@@ -67,14 +67,9 @@ function changeItem(index: number) {
   color: #ffffff !important;
 }
 
-.video {
+.dashboard {
   display: flex;
-  padding: 10px;
-  .video-window {
-    width: 482px;
-    height: 300px;
-    background-color: green;
-  }
+  padding: 40px 0 0 20px;
 }
 .list {
   margin-left: 15px;

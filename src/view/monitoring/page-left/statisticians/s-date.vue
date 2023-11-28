@@ -29,6 +29,7 @@
   color: #ffffff;
   width: 210px;
   height: 45px;
+  text-align: center;
   background: url('@/assets/monitoring/title-bg01.png');
 }
 .statistics {

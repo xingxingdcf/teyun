@@ -16,6 +16,7 @@ import AudioVisual from './audio-visual/index.vue'
 
 <style scoped lang="less">
 .page-right {
+  margin-right: 20px;
   background: linear-gradient(180deg, rgba(0, 24, 97, 0) 0%, #001861 95%, #002cab 100%);
   border: 1px solid;
   border-image: linear-gradient(180deg, rgba(0, 82, 149, 0), rgba(0, 140, 255, 1)) 1 1;

@@ -1,31 +1,38 @@
 <template>
-  <div>
-    <el-input
-      v-model="input1"
-      class="el-input"
-      size="large"
-      placeholder="搜索"
-      :prefix-icon="Search"
-    />
-    <div class="list">
-      <el-scrollbar max-height="500px" style="padding: 0 20px 0 0">
-        <div
-          class="item"
-          v-for="(item, index) in 20"
-          @click="changeItem(index)"
-          :class="{ 'active-item': activeItem === index }"
-        >
-          <div class="name">特运指挥中心(COSCO)</div>
-          <img src="@/assets/monitoring/play-audio.png" v-if="activeItem === index" class="play" />
-        </div>
-      </el-scrollbar>
-    </div>
+  <el-input
+    v-model="input1"
+    class="el-input"
+    size="large"
+    placeholder="搜索"
+    :prefix-icon="Search"
+  />
+  <div class="list" :style="{ width }">
+    <el-scrollbar :max-height="maxHeight" style="padding: 0 20px 0 0">
+      <div
+        class="item"
+        v-for="(item, index) in 20"
+        @click="changeItem(index)"
+        :class="{ 'active-item': activeItem === index }"
+      >
+        <div class="name">特运指挥中心(COSCO)</div>
+        <img src="@/assets/monitoring/play-audio.png" v-if="activeItem === index" class="play" />
+      </div>
+    </el-scrollbar>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, component } from 'vue'
+import { ref } from 'vue'
 import { Search } from '@element-plus/icons-vue'
+
+interface Props {
+  maxHeight?: string
+  width?: string
+}
+withDefaults(defineProps<Props>(), {
+  maxHeight: '500px',
+  width: '270px'
+})
 
 const input1 = ref('')
 const activeItem = ref(0)

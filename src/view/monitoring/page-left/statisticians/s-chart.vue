@@ -13,17 +13,19 @@
         </div>
         <div class="date">
           <el-date-picker
-            class="el-date-editor"
+            :clearable="false"
+            class="el-date-picker"
             v-model="value1"
-            type="date"
+            type="month"
             placeholder="Pick a day"
-            popper-class="date-style"
+            popper-class="elDatePicker"
             :teleported="false"
           />
           <el-date-picker
-            class="el-date-editor"
+            :clearable="false"
+            class="el-date-picker"
             v-model="value1"
-            type="date"
+            type="month"
             placeholder="Pick a day"
             popper-class="date-style"
             :teleported="false"
@@ -33,7 +35,7 @@
     </div>
     <div class="chart">
       <line-echart
-        width="680px"
+        width="720px"
         height="270px"
         :labels="showGoodsCategorySale.labels"
         :values="showGoodsCategorySale.values"
@@ -62,6 +64,7 @@ const showGoodsCategorySale = reactive({
 </script>
 
 <style lang="less" scoped>
+@import '@/design/el/el-date-picker.less';
 .top {
   display: flex;
   justify-content: space-between;
@@ -88,7 +91,7 @@ const showGoodsCategorySale = reactive({
     height: 4px;
     border-radius: 2px;
     background-color: #1c60fe;
-    .line2 {
+    &.line2 {
       background-color: #f8ba4c !important;
     }
   }
@@ -106,16 +109,7 @@ const showGoodsCategorySale = reactive({
   }
 }
 .date {
+  margin-left: 16px;
   display: flex;
-  align-items: center;
-  margin-left: 22px;
-  :deep(.el-date-editor) {
-    width: 100px;
-    height: 36px;
-    background-color: #1c60fe;
-  }
-}
-.date-style {
-  background-color: #1c60fe;
 }
 </style>

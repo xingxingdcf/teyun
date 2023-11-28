@@ -3,7 +3,9 @@
     <el-row>
       <!-- 第一个盒子，占满一行 -->
       <el-col :span="24">
-        <div class="first-video-box">盒子1</div>
+        <div class="first-video-box">
+          <img src="@/assets/common/test2.png" alt="" />
+        </div>
       </el-col>
 
       <!-- 接下来的四个盒子，每行显示两个 -->
@@ -15,7 +17,7 @@
             marginLeft: index % 2 !== 0 ? '4px' : ''
           }"
         >
-          盒子{{ index + 2 }}
+          <img src="@/assets/common/test2.png" alt="" />
         </div>
       </el-col>
     </el-row>
@@ -26,18 +28,24 @@
 
 <style scoped lang="less">
 .screen {
-  width: 718px;
+  width: 750px;
 }
 
 .first-video-box {
   height: 400px;
-  background-color: #eee;
   margin-bottom: 8px;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .video-box {
-  background-color: #eee;
   text-align: center;
   height: 200px;
   margin-bottom: 8px;
+  > img {
+    width: 100%;
+    height: 100%;
+  }
 }
 </style>
